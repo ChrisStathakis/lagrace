@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 REAL_DB = True
-PRODUCTION = False
+PRODUCTION = True
 
 ALLOWED_HOSTS = ['monemvasiaevents.herokuapp.com', 'www.monemvasiaevents.com'] if PRODUCTION else []
 
