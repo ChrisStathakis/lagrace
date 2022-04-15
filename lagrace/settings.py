@@ -29,7 +29,7 @@ DEBUG = True
 REAL_DB = True
 PRODUCTION = True
 
-ALLOWED_HOSTS = ['monemvasiaevents.herokuapp.com', 'www.monemvasiaevents.com'] if PRODUCTION else []
+ALLOWED_HOSTS = ['la-grace.herokuapp.com', 'www.lagrace.gr'] if PRODUCTION else []
 
 if PRODUCTION:
     SESSION_COOKIE_SECURE = True
