@@ -28,6 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 REAL_DB = True
 PRODUCTION = True
+rr = ''
 
 ALLOWED_HOSTS = ['la-grace.herokuapp.com', 'www.lagrace.gr'] if PRODUCTION else []
 
