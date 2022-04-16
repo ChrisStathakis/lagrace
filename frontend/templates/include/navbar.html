@@ -1,4 +1,5 @@
 {% load static %}
+
  <!-- header start -->
     <header>
         <div class="mobile-fix-option"></div>
@@ -8,13 +9,17 @@
                     <div class="col-lg-6">
                         <div class="header-contact">
                             <ul>
-                                <li>Σκάλα - Μολάοι</li>
-                                <li><i class="fa fa-phone" aria-hidden="true"></i> 27320 29200</li>
+                                <li>ΣΚΑΛΑ - ΜΟΛΑΟΙ</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i><a style="color: white;" href="tel:27320 29200">27320 29200</a> </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 text-end">
-
+                        <ul class="header-dropdown">
+                            <li class=""> <i class="fa fa-link" aria-hidden="true"></i>
+                                <a href="https://mymoda.gr/">WWW.MYMODA.GR</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -37,14 +42,17 @@
                                                     aria-hidden="true"></i> Back</div>
                                         </div>
                                         <ul id="sub-menu" class="sm pixelstrap sm-vertical">
-                                            <li><a href="#">Facebook</a></li>
-                                            <li><a href="#">Instagram</a></li>
+                                            <li><a href="https://www.facebook.com/mymoda.gr">FACEBOOK</a></li>
+                                            <li><a href="https://www.instagram.com/mymoda.gr/">INSTRAGRAM</a></li>
+                                            <li><a href="https://mymoda.gr/contact-us">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+                                            <li><a href="https://mymoda.gr/prices-drop">ΠΡΟΣΦΟΡΕΣ</a></li>
+
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
                             <div class="brand-logo">
-                                <a href="{% url 'homepage' %}"><img width="70" height="30" src="{% static 'images/lagrace.jpg' %}"
+                                <a href="{% url 'homepage' %}"><img width="70" height="50" src="{% static 'images/lagrace.jpg' %}"
                                         class="img-fluid blur-up lazyload" alt=""></a>
                             </div>
                             <div class="ms-4">
@@ -54,8 +62,7 @@
                                             <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2"
                                                     aria-hidden="true"></i></div>
                                         </li>
-
-                                        {% for category in categories %}
+                                         {% for category in categories %}
                                              <li class="mega" id="hover-cls">
                                                  <a href="#" class="has-submenu" id="sm-16500299171326484-1" aria-haspopup="true" aria-controls="sm-16500299171326484-2" aria-expanded="false">{{ category }}<span class="sub-arrow"></span></a>
                                                  <ul class="mega-menu full-mega-menu sm-nowrap" id="sm-16500299171326484-2" role="group" aria-hidden="true" aria-labelledby="sm-16500299171326484-1" aria-expanded="false" style="width: auto; display: none; top: auto; left: 0px; margin-left: -441px; margin-top: 0px; min-width: 10em; max-width: 20em;">
@@ -91,17 +98,23 @@
                                             </ul>
                                         </li>
                                         {% endfor %}
-
-
-
                                     </ul>
                                 </nav>
                             </div>
                         </div>
+                        <div class="menu-right pull-right">
+                            <nav>
+                                <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+                            </nav>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
- <!-- header end -->
+    <!-- header end -->
+
+
+
+
