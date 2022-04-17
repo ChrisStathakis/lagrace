@@ -27,8 +27,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 REAL_DB = True
-PRODUCTION = True
-rr = ''
+PRODUCTION = False
+
 
 ALLOWED_HOSTS = ['la-grace.herokuapp.com', 'www.lagrace.gr'] if PRODUCTION else []
 
