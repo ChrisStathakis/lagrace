@@ -37,7 +37,26 @@
     </section>
     <!-- Home slider end -->
 
+   <section class="banner-padding banner-furniture ratio2_1">
+        <div class="container-fluid">
+            <div class="row partition3">
+                {% for banner in small_banners %}
+                <div style="margin-bottom: 3%" class="col-md-4">
+                    <a href="{{ banner.url }}">
+                        <div class="collection-banner p-left text-start">
+                            <div class="img-part bg-size blur-up lazyloaded" style="background-image: url({{ banner.image.url }}); background-size: cover; background-position: center center; display: block;">
+                                <img src="{{ banner.image.url }}" alt="" class="img-fluid blur-up lazyload bg-img" style="display: none;">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
 
+            </div>
+        </div>
+    </section>
+
+{% comment %}
     <!-- collection banner -->
     <section class="banner-padding ratio2_1">
         <div class="container">
@@ -71,7 +90,7 @@
         </div>
     </section>
     <!-- collection banner end -->
-
+{% endcomment %}
 
     <!-- product section start-->
     <div class="title1 section-t-space">
@@ -290,9 +309,8 @@
 Το κατάστημά μας δραστηριοποιείται σε αυτούς τους τομείς από το 1995 με τα φυσικά καταστήματα La Grace στους Μολάους και στη Σκάλα Λακωνίας. </p>
                             </div>
                         </div>
-                        <div class="col-lg-5 subscribe-wrapper">
-                            <div class="col p-set">
-                            <div class="footer-link">
+                        <div class="col-lg-5">
+
                                 <div class="footer-title">
                                     <h4>ΠΛΗΡΟΦΟΡΙΕΣ</h4>
                                 </div>
@@ -305,9 +323,7 @@
 
                                     </ul>
                                 </div>
-                            </div>
 
-                        </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="footer-title">
@@ -317,7 +333,7 @@
                                 <ul class="contact-details">
                                     <li>ΣΚΑΛΑ:  Γεωργιου Γρυπιωτη</li>
                                     <li>ΜΟΛΑΟΙ: Κωνσταντινου Παπαμιχαλοπουλου</li>
-                                    <li>Email Us: <a href="emailto:info@mymoda.gr">info@mymoda.gr</a></li>
+                                    <li>Email Us: <a href="mailto:info@mymoda.gr">info@mymoda.gr</a></li>
 
                                 </ul>
                             </div>
