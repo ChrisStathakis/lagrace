@@ -12,30 +12,34 @@
 
    {% include 'include/navbar.html' %}
 
-
-    <!-- Home slider -->
+     <!-- Home slider -->
     <section class="p-0">
-        <div class="center-home-slider sm-size home-slider layout-7">
-            {% for image in main_banners %}
-            <a href="{{ banner.url }}">
-                <div class="home p-right text-center">
-
-                    <img src="{{ image.image.url }}" alt="" class="bg-img blur-up lazyload">
+        <div class="slide-1 home-slider">
+            {% for ele in main_banners %}
+            <div>
+                <div class="home  text-center">
+                    <img src="{{ ele.image.url }}" alt="" class="bg-img blur-up lazyload">
                     <div class="container">
                         <div class="row">
                             <div class="col">
                                 <div class="slider-contain">
+                                    <div>
+                                        <a href="{{ ele.url }}" class="btn btn-solid">shop now</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
             {% endfor %}
 
         </div>
     </section>
     <!-- Home slider end -->
+
+
+
 
    <section class="banner-padding banner-furniture ratio2_1">
         <div class="container-fluid">
@@ -108,7 +112,7 @@
                             <img width="209" height="102"  src="{% static 'images/lagrace.jpg' %}" />
                             <h4>ΜΟΛΑΟΙ</h4>
                             <p>ΔΙΕΥΘΥΝΣΗ: Κωνσταντινου Παπαμιχαλοπουλου 6 <br>
-                                ΤΗΛΕΦΩΝΑ: ΚΕΝΤΡΙΚΟ <a href="tel:2732023884">2732023884</a>
+                                ΤΗΛΕΦΩΝΑ ΚΕΝΤΡΙΚΟ: <a href="tel:2732023884">2732023884</a>
                                 <br> ΠΑΙΔΙΚΟ:  <a href="tel:2732029006">2732029006</a>
                             </p>
                         </div>
@@ -316,19 +320,18 @@
                             </div>
                         </div>
                         <div class="col-lg-5">
-
-                                <div class="footer-title">
-                                    <h4>ΠΛΗΡΟΦΟΡΙΕΣ</h4>
-                                </div>
-                                <div class="footer-contant">
-                                    <ul>
-                                        <li><a href="https://mymoda.gr/content/4-about-us">Σχετικά με εμάς</a></li>
-                                        <li><a href="https://mymoda.gr/content/3-terms-and-conditions-of-use">Όροι χρήσης</a></li>
-                                        <li><a href="https://mymoda.gr/content/11-politiki-cookies">Πολιτική για Cookies</a></li>
-                                        <li><a href="https://mymoda.gr/content/12-politiki-aporritou">Πολιτική Απορρήτου</a></li>
-
-                                    </ul>
-                                </div>
+                            <div class="footer-title">
+                                <h4>ΠΛΗΡΟΦΟΡΙΕΣ</h4>
+                            </div>
+                            <div class="footer-contant">
+                                <ul>
+                                    <li><a style="color: white" href="https://mymoda.gr/content/3-terms-and-conditions-of-use">Όροι χρήσης</a></li>
+                                </ul>
+                            </div>
+                            <br>
+                            <hr>
+                            <h5 style="color: white">ΜΟΛΑΟΙ</h5>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.3638371600928!2d22.855102032346444!3d36.80310932441994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6dd626b71efcd504!2sLa%20Grace!5e0!3m2!1sel!2sgr!4v1650342565392!5m2!1sel!2sgr" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                         </div>
                         <div class="col-lg-4">

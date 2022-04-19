@@ -25983,6 +25983,7 @@ body.rtl .account-setting {
   .rtl .testimonial .testimonial-slider .media .media-body {
     text-align: center;
     padding: 6px; }
+
   .rtl .review-page .comment-section .media {
     text-align: center; }
   .rtl .blog-detail-page .comment-section li img {
@@ -25997,6 +25998,9 @@ body.rtl .account-setting {
 @media (max-width: 420px) {
   .rtl .full-box .center-slider .offer-slider .product-box {
     direction: rtl; }
+  .slick-slider.slick-slider{
+    height:200px;
+  }
     .rtl .full-box .center-slider .offer-slider .product-box .img-wrapper img {
       padding: 0 0 0 15px; }
   .rtl .product-right .product-icon .product-social li {
@@ -26008,6 +26012,7 @@ body.rtl .account-setting {
     padding-right: 20px; }
   .rtl .center-slider .offer-slider .product-box .product-detail {
     text-align: right !important; } }
+
 
 @media (max-width: 360px) {
   .rtl .timer span .padding-l {

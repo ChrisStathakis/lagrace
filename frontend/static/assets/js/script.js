@@ -127,7 +127,7 @@
 
         parent.css({
             'background-image': 'url(' + src + ')',
-            'background-size': '100% auto',
+            'background-size': '100%',
             'background-position': 'center',
             'display': 'block'
         });
