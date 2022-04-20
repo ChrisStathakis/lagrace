@@ -25999,7 +25999,8 @@ body.rtl .account-setting {
   .rtl .full-box .center-slider .offer-slider .product-box {
     direction: rtl; }
   .slick-slider.slick-slider{
-    height:300px;
+      height:280px;
+
   }
     .rtl .full-box .center-slider .offer-slider .product-box .img-wrapper img {
       padding: 0 0 0 15px; }
