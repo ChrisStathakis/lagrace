@@ -30,6 +30,7 @@ REAL_DB = True
 PRODUCTION = True
 
 
+
 ALLOWED_HOSTS = ['la-grace.herokuapp.com', 'www.lagrace.gr'] if PRODUCTION else []
 
 if PRODUCTION:
