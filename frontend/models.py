@@ -55,6 +55,14 @@ class ShopPhoto(models.Model):
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='shops/', )
 
+    class Meta:
+        verbose_name_plural = 'ΦΩΤΟΓΡΑΦΙΕΣ ΚΑΤΑΣΤΗΜΑΤΩΝ'
+
     def __str__(self):
         return f'{self.shop.title}- {self.id}'
+
+    def admin_image(self):
+        if self.image:
+            return mark_safe(f'<img src="{self.image.url}" width="50px" height="50px">')
+        return 'No Photo'
 

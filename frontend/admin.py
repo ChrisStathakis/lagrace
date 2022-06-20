@@ -25,4 +25,6 @@ class ShopAdmin(admin.ModelAdmin):
 
 @admin.register(ShopPhoto)
 class ShopPhotoAdmin(admin.ModelAdmin):
-    list_display = ['shop', 'image']
+    list_display = ['admin_image', 'shop', 'image']
+    list_filter = ['shop']
+    readonly_fields = ['admin_image']
