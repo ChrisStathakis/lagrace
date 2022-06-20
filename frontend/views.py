@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Category, Banner
+from .models import Category, Banner, ShopPhoto, Shop
 
 
 def homepage(request):
@@ -10,4 +10,6 @@ def homepage(request):
     context['main_banners'] = banners.filter(category='a')
     context['small_banners'] = banners.filter(category='b')[:4]
     context['banner'] = banners.filter(category='c').first() if banners.filter(category='c').exists() else None
+    context['shops'] = Shop.objects.all()
+    context['shop_images'] = ShopPhoto.objects.all()
     return render(request, 'index.html', context)

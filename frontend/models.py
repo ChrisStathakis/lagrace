@@ -42,3 +42,19 @@ class Banner(models.Model):
         if self.image:
             return mark_safe(f'<img src="{self.image.url}" width="50px" height="50px">')
         return 'No Photo'
+
+
+class Shop(models.Model):
+    title = models.CharField(max_length=220)
+
+    def __str__(self):
+        return self.title
+
+
+class ShopPhoto(models.Model):
+    shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='shops/', )
+
+    def __str__(self):
+        return f'{self.shop.title}- {self.id}'
+

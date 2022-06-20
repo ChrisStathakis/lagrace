@@ -148,75 +148,41 @@
     </section>
 
 
-    <!-- Our Project Start -->
+
+
+
+   <!-- Our Project Start -->
     <section class="portfolio-section grid-portfolio ratio2_3 portfolio-padding">
         <div class="container">
             <div align="center" id="form1">
                 <button class="filter-button project_button active" data-filter="all">All</button>
-                <button class="filter-button project_button" data-filter="skala">ΣΚΑΛΑ</button>
-                <button class="filter-button project_button" data-filter="molaoi">ΜΟΛΑΟΙ</button>
-                <button class="filter-button project_button" data-filter="paidiko">ΜΟΛΑΟΙ-ΠΑΙΔΙΚΟ</button>
+                {% for shop in shops %}
+                    <button class="filter-button project_button" data-filter="shop_{{ shop.id }}">{{ shop }}</button>
+                {% endfor %}
+
 
             </div>
             <div class="row zoom-gallery">
-                <div class="isotopeSelector filter skala col-sm-6">
-                    <div class="overlay">
-                        <div class="border-portfolio">
-                            <a href="{% static 'images/skala1.jpg' %}">
-                                <div class="overlay-background">
-                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                                </div>
-                                <img src="{% static 'images/skala1.jpg' %}"
-                                    class="img-fluid blur-up lazyload bg-img">
-                            </a>
+                {% for image in shop_images %}
+                    <div class="isotopeSelector filter shop_{{ image.shop.id }} col-sm-6">
+                        <div class="overlay">
+                            <div class="border-portfolio">
+                                <a href="{{ image.image.url }}">
+                                    <div class="overlay-background">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div>
+                                    <img src="{{ image.image.url }}"
+                                        class="img-fluid blur-up lazyload bg-img">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="isotopeSelector filter skala col-sm-6">
-                    <div class="overlay">
-                        <div class="border-portfolio">
-                            <a href="{% static 'images/skala2.jpg' %}">
-                                <div class="overlay-background">
-                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                                </div>
-                                <img src="{% static 'images/skala2.jpg' %}"
-                                    class="img-fluid blur-up lazyload bg-img">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="isotopeSelector filter skala col-sm-6">
-                    <div class="overlay">
-                        <div class="border-portfolio">
-                            <a href="{% static 'images/skala3.jpg' %}">
-                                <div class="overlay-background">
-                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                                </div>
-                                <img src="{% static 'images/skala3.jpg' %}"
-                                    class="img-fluid blur-up lazyload bg-img">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="isotopeSelector filter molaoi col-sm-6">
-                    <div class="overlay">
-                        <div class="border-portfolio">
-                            <a href="{% static 'images/kentriko1.jpg' %}">
-                                <div class="overlay-background">
-                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                                </div>
-                                <img src="{% static 'images/kentriko1.jpg' %}"
-                                    class="img-fluid blur-up lazyload bg-img">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+
             </div>
         </div>
     </section>
     <!-- Our Project End -->
-
-
 
 
 
